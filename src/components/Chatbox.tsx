@@ -18,7 +18,7 @@ export default function ChatBox() {
     try {
         setLoading(true);
       const response = await axios.post(
-              `http://ai.wazzi.site/api/generate`,
+              `http://localhost:5134/api/generate`,
               {
                   model: "deepseek-r1",
                   prompt: newUserMessage.text,
