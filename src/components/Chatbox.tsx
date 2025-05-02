@@ -2,11 +2,13 @@ import { useState } from 'react';
 import axios from 'axios';
 import Message from './Message';
 import { MessageType } from '../types/message';
+import { useNavigate } from 'react-router-dom';
 
 export default function ChatBox() {
   const [messages, setMessages] = useState<MessageType[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const sendMessage = async () => {
     if (!input.trim()) return;
@@ -41,6 +43,11 @@ export default function ChatBox() {
 
   return (
     <div className="flex flex-col justify-between h-[100vh] w-full mx-auto bg-gray-800">
+        <header className="flex justify-between w-full bg-gray-900 text-white py-4 shadow-md z-1">
+            <div className="container mx-auto px-4 flex items-center cursor-pointer" onClick={() => navigate('/')}>
+                <h1 className="text-2xl font-bold shimmer-effect">WAZZI</h1>
+            </div>
+        </header>        
         <div className="flex-1 overflow-y-auto min-h-full rounded shadow mb-20 h-[400px] p-10">
             {messages.map((msg, idx) => (
             <Message key={idx} message={msg} />

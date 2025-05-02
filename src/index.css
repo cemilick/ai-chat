@@ -15,6 +15,40 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#main-page {
+  background-image: url('./assets/one-piece.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  
+}
+
+.product-item:hover {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.shimmer-effect {
+  background: linear-gradient(90deg, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.1) 75%);
+  background-size: 200% 100%;
+  display: inline-block;
+  position: relative;
+  animation: shimmer 2s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes shimmer {
+  0% {
+      background-position: -200% 0;
+  }
+  100% {
+      background-position: 200% 0;
+  }
+}
+
 a {
   font-weight: 500;
   color: #646cff;
