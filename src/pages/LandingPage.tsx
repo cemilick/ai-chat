@@ -31,7 +31,11 @@ const LandingPage: React.FC = () => {
                             <img src={Chatbot} alt="Chatbot Icon" className="w-25 h-25 mx-auto mb-2" />
                             <p className="text-gray-500 text-sm mt-2 max-w-xs">An chat app demos using Deepsek R1 LLM Models on private server.</p>
                         </div>
-                        
+                        <div className="product-item bg-gray-900 p-4 rounded-lg shadow-md" onClick={() => navigate('/ai')}>
+                            <h4 className="text-lg font-bold text-gray-200 mb-3">AI Chat App</h4>
+                            <img src={Chatbot} alt="Chatbot Icon" className="w-25 h-25 mx-auto mb-2" />
+                            <p className="text-gray-500 text-sm mt-2 max-w-xs">An chat app demos using Deepsek R1 LLM Models on private server.</p>
+                        </div>
                     </div>
                     <h3 className="text-2xl font-semibold text-gray-800 mb-2">Our Teams</h3>
                     <p className="text-gray-600">
@@ -40,17 +44,17 @@ const LandingPage: React.FC = () => {
                         <div className="bg-gray-900 p-4 rounded-lg shadow-md">
                             <h4 className="text-lg font-bold text-gray-200 mb-3">Mr. Aaron</h4>
                             <img src={Employee} alt="Chatbot Icon" className="w-25 h-25 mx-auto mb-2" />
-                            <p className="text-gray-500 text-sm mt-2 max-w-xs">An chat app demos using Deepsek R1 LLM Models on private server.</p>
+                            <p className="text-gray-500 text-sm mt-2 max-w-xs">An expert software developer focusing on AI.</p>
                         </div>
                         <div className="col-md-2 bg-gray-900 p-4 rounded-lg shadow-md">
                             <h4 className="text-lg font-bold text-gray-200 mb-3">Mr. Luiz Perotto</h4>
                             <img src={Employee} alt="Chatbot Icon" className="w-25 h-25 mx-auto mb-2" />
-                            <p className="text-gray-500 text-sm mt-2 max-w-xs">An chat app demos using Deepsek R1 LLM Models on private server.</p>
+                            <p className="text-gray-500 text-sm mt-2 max-w-xs">An expert software developer focusing on AI.</p>
                         </div>
                         <div className="col-md-2 bg-gray-900 p-4 rounded-lg shadow-md">
                             <h4 className="text-lg font-bold text-gray-200 mb-3">Mr. Cemilick</h4>
                             <img src={Employee} alt="Chatbot Icon" className="w-25 h-25 mx-auto mb-2" />
-                            <p className="text-gray-500 text-sm mt-2 max-w-xs">An chat app demos using Deepsek R1 LLM Models on private server.</p>
+                            <p className="text-gray-500 text-sm mt-2 max-w-xs">An expert software developer focusing on AI.</p>
                         </div>
                         
                         </div>

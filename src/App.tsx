@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-import Chatbox from './components/Chatbox';
 import LandingPage from './pages/LandingPage';
+import LandingPageNew from './pages/LandingPageNew';
+import ChatApp from './pages/ChatApp';
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/ai" element={<Chatbox />} />
+          <Route path="/new" element={<LandingPageNew />} />
+          <Route path="/ai" element={<ChatApp />} />
         </Routes>
       </main>
     </div>
