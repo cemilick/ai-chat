@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import TypingTitle from "../components/TypingTitle";
-import { useNavigate } from "react-router-dom";
 import Chatroom from "../components/Chatroom";
 
 const ChatApp: React.FC = () => {
-    const navigate = useNavigate();
-
     const [start, setStart] = useState(false);
     const [input, setInput] = useState("");
     const [message, setMessage] = useState("");
