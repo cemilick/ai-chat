@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronRight, Star, Check, ArrowRight, Zap, Shield, Users, Globe, Play, Award, TrendingUp, Bot, Brain, MessageCircle, Cpu, Database, Code, BookOpen, Calendar, User, Send, Mic, MicOff, Image, Slack } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Menu, X, Star, Check, ArrowRight, Shield, Award, Bot, Brain, MessageCircle, Cpu, Database, Code, BookOpen, Calendar, User, Send, Mic, MicOff, Slack } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const LandingPageNew2 = () => {
