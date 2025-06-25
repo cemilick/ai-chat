@@ -699,7 +699,7 @@ const Games = () => {
 
             {/* Services Cards */}
             <div className="grid gap-8 md:grid-cols-3 max-w-4xl mx-auto mb-12">
-            {services.map((service, idx) => (
+            {services.map((service) => (
             <div
             key={service.id}
             onClick={() => setCurrentScreen(service.screen)}
