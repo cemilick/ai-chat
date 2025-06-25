@@ -25,7 +25,7 @@ const ChatApp: React.FC = () => {
 
                 <TypingTitle
                     speed={75}
-                    text="Welcome to Wazzi AI Chat App"
+                    children={<span>Welcome to Wazzi AI Chat App</span>}
                     className="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white"
                 />
                 <p className="mt-3 text-gray-600 dark:text-neutral-400">

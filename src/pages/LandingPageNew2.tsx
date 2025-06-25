@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Star, Check, ArrowRight, Shield, Award, Bot, Brain, MessageCircle, Cpu, Database, Code, BookOpen, Calendar, User, Send, Mic, MicOff, Slack } from 'lucide-react';
+import { Menu, X, Star, Check, ArrowRight, Shield, Award, Bot, Brain, MessageCircle, Cpu, Database, Code, BookOpen, Calendar, User, Send, Mic, MicOff, Slack, Rocket } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import TypingTitle from '../components/TypingTitle';
 
 const LandingPageNew2 = () => {
   const navigate = useNavigate();
@@ -51,40 +52,51 @@ const LandingPageNew2 = () => {
   const aiServices = [
     {
       icon: <MessageCircle className="w-8 h-8" />,
-      title: "AI Chatbots",
+      title: "AI CHATBOTS",
       description: "Intelligent conversational AI that understands context and provides human-like responses",
-      features: ["24/7 Customer Support", "Multi-language Support", "Custom Training", "Integration Ready"]
+      features: ["24/7 Customer Support", "Multi-language Support", "Integration Ready"],
+      to: "/ai"
     },
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: "Machine Learning APIs",
-      description: "Pre-trained models for classification, prediction, and pattern recognition",
-      features: ["Image Recognition", "Text Analysis", "Predictive Analytics", "Custom Models"]
+      icon: <Rocket className="w-8 h-8" />,
+      title: "WAZZI GAMING HUB",
+      description: "Gaming platform offering personalized experiences for players and developers.",
+      features: [
+        "Galactic Joki Games",
+        "Space Games",
+        "Quantum Top Up",
+      ],
+      to: "/games"
     },
     {
       icon: <Cpu className="w-8 h-8" />,
-      title: "Computer Vision",
-      description: "Advanced image and video analysis for automated visual intelligence",
-      features: ["Object Detection", "Facial Recognition", "OCR Technology", "Real-time Processing"]
+      title: "N8N SERVICES",
+      description: "Automate workflows and connect your favorite apps with N8N",
+      features: [
+        "Custom Triggers & Actions",
+        "Automated Data Sync",
+        "Conditional Logic",
+      ],
+      to: "https://arul.wazzi.site"
     },
-    {
-      icon: <Database className="w-8 h-8" />,
-      title: "Data Intelligence",
-      description: "Transform raw data into actionable insights with AI-powered analytics",
-      features: ["Smart Analytics", "Automated Reports", "Trend Analysis", "Data Visualization"]
-    },
-    {
-      icon: <Code className="w-8 h-8" />,
-      title: "AI Development Platform",
-      description: "Complete toolkit for building and deploying custom AI solutions",
-      features: ["No-Code Builder", "API Management", "Model Training", "Cloud Deployment"]
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "AI Security & Ethics",
-      description: "Ensure responsible AI implementation with built-in safety measures",
-      features: ["Bias Detection", "Privacy Protection", "Audit Trails", "Compliance Tools"]
-    }
+    // {
+    //   icon: <Database className="w-8 h-8" />,
+    //   title: "Data Intelligence",
+    //   description: "Transform raw data into actionable insights with AI-powered analytics",
+    //   features: ["Smart Analytics", "Automated Reports", "Trend Analysis", "Data Visualization"]
+    // },
+    // {
+    //   icon: <Code className="w-8 h-8" />,
+    //   title: "AI Development Platform",
+    //   description: "Complete toolkit for building and deploying custom AI solutions",
+    //   features: ["No-Code Builder", "API Management", "Model Training", "Cloud Deployment"]
+    // },
+    // {
+    //   icon: <Shield className="w-8 h-8" />,
+    //   title: "AI Security & Ethics",
+    //   description: "Ensure responsible AI implementation with built-in safety measures",
+    //   features: ["Bias Detection", "Privacy Protection", "Audit Trails", "Compliance Tools"]
+    // }
   ];
 
   const blogPosts = [
@@ -234,8 +246,13 @@ const LandingPageNew2 = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Unlock the Power of
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Artificial Intelligence</span>
+            <TypingTitle 
+              speed={50}
+              children={<>
+              Unlock the Power of
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Artificial Intelligence</span>
+              </>}
+            />
           </h1>
           
           <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
@@ -274,36 +291,46 @@ const LandingPageNew2 = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Complete
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> AI Services Suite</span>
+              Our
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Excellent Services</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive artificial intelligence solutions for every business need
+              Experience excellence with our full suite of services—reliable, innovative, and tailored to drive your business success.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
-              <div key={index} className="group p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all hover:transform hover:scale-105 backdrop-blur-sm">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {aiServices.map((service, index) => (
+              <div
+                onClick={() => {
+                  if (service.to?.includes("https://")) {
+                    window.location.href = service.to
+                  } else {
+                    navigate(service.to);
+                  }
+                }} 
+                key={index} 
+                className="group p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all hover:transform hover:scale-105 backdrop-blur-sm cursor-pointer"
+              >
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-blue-500/25 transition-all">
-                  {service.icon}
+                {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-slate-300 leading-relaxed mb-6">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-slate-400">
-                      <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-sm text-slate-400">
+                  <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                  {feature}
+                  </li>
+                ))}
                 </ul>
                 <button className="mt-6 w-full bg-slate-700 hover:bg-slate-600 text-white py-2 px-4 rounded-lg transition-all">
-                  Learn More
+                Learn More
                 </button>
               </div>
-            ))}
-          </div>
+              ))}
+            </div>
         </div>
       </section>
 
