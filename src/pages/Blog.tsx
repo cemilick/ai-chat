@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Search, Calendar, User, Eye, Edit, Trash2, Plus, Menu, X, LogOut, Save } from 'lucide-react';
 
 // Types

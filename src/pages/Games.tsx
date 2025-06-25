@@ -1,27 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { 
   Gamepad2, 
   Trophy, 
   CreditCard, 
-  Zap, 
-  Star, 
-  Users, 
-  Shield, 
-  Clock,
   ChevronRight,
   Play,
-  Sparkles,
   Volume2,
   VolumeX,
-  Power,
-  Settings,
   Rocket,
-  Satellite,
   Orbit,
-  Moon,
   Cpu,
-  Monitor,
-  Home,
   ArrowLeft,
   RotateCcw,
   Pause
@@ -33,7 +21,6 @@ const Games = () => {
   const [bootingText, setBootingText] = useState('');
   const [welcomeText, setWelcomeText] = useState('');
   const [soundEnabled, setSoundEnabled] = useState(true);
-  const [activeCard, setActiveCard] = useState<number | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   
   // Snake Game States
@@ -48,13 +35,13 @@ const Games = () => {
   });
 
   // Blocks Game States
-  const [blocksGame, setBlocksGame] = useState({
-    blocks: Array(20).fill(null).map(() => Array(10).fill(0)),
-    currentPiece: null,
-    score: 0,
-    gameOver: false,
-    isPlaying: false
-  });
+//   const [blocksGame, setBlocksGame] = useState({
+//     blocks: Array(20).fill(null).map(() => Array(10).fill(0)),
+//     currentPiece: null,
+//     score: 0,
+//     gameOver: false,
+//     isPlaying: false
+//   });
 
   // Memory Game States
   const [memoryGame, setMemoryGame] = useState({
@@ -618,7 +605,7 @@ const Games = () => {
           </div>
 
           <div className="grid gap-4 max-w-2xl mx-auto">
-            {['Rank Boosting', 'Achievement Unlock', 'Campaign Complete', '24/7 Support'].map((service, index) => (
+            {['Rank Boosting', 'Achievement Unlock', 'Campaign Complete', '24/7 Support'].map((service) => (
               <div key={service} className="bg-gray-900/50 border border-cyan-500/30 rounded-lg p-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
@@ -661,7 +648,7 @@ const Games = () => {
           </div>
 
           <div className="grid gap-4 max-w-2xl mx-auto">
-            {['Instant Processing', 'Secure Payment', 'Best Rates', 'Auto Delivery'].map((feature, index) => (
+            {['Instant Processing', 'Secure Payment', 'Best Rates', 'Auto Delivery'].map((feature) => (
               <div key={feature} className="bg-gray-900/50 border border-green-500/30 rounded-lg p-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>

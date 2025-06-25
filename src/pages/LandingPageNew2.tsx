@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Star, Check, ArrowRight, Shield, Award, Bot, Brain, MessageCircle, Cpu, Database, Code, BookOpen, Calendar, User, Send, Mic, MicOff, Slack, Rocket } from 'lucide-react';
+import { Menu, X, Star, Check, ArrowRight, Award, Bot, MessageCircle, Cpu, BookOpen, Calendar, User, Send, Mic, MicOff, Slack, Rocket } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import TypingTitle from '../components/TypingTitle';
 
